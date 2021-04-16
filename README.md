@@ -10,7 +10,7 @@
 * Un sensor HW691
 
 ## Descripción del Proyecto
- Utilizamos la Raspberry Pi para hacer nuestro servidor
+ Utilizamos la Raspberry Pi para hacer nuestro servidor, MySQL para nuestro motor de base de datos
 
 ## Construido con 🛠️
  
