@@ -18,8 +18,8 @@
 
 ## Autores ✒️
 
-* **Giohanna Martínez Fernández** - [gmfv](https://github.com/gmfv)
-* **Matias Gagliardone**
+* **Giohanna Martínez Fernández** - [GiohannaM](https://github.com/gmfv)
+* **Matias Gagliardone** - [MatiasGagliardone](https://github.com/matiGSX)
 * **Diego Valenzuela Bernal** - [ValenzuelaDiego](https://github.com/ValenzuelaDiego)
-* **Julio Fabian Avalos Peralta** 
-* **Diego Garcia**
+* **Julio Fabian Avalos Peralta** - [FabianA](https://github.com/JAvalos1)
+* **Diego Garcia** - [DiegoGar](https://github.com/diegogar95)
