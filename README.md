@@ -20,6 +20,6 @@
 
 * **Giohanna Martínez Fernández** - [gmfv](https://github.com/gmfv)
 * **Matias Gagliardone**
-* **Diego Valenzuela Bernal**
+* **Diego Valenzuela Bernal** - [ValenzuelaDiego](https://github.com/ValenzuelaDiego)
 * **Julio Fabian Avalos Peralta** 
 * **Diego Garcia**
