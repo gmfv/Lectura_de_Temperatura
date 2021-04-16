@@ -1,0 +1,230 @@
+<!-- Diego Valenzuela - 2021
+Tutoriales> w3schools.com
+Comentarios Generales de la clase:
+1- Las estiquetas siempre se deben de cerrar
+2- Los documentos tiene que estar bien formados
+3- Recomendacion: escribir siempre las etiquetas en minusculas 
+4- Los valores de los atributos siempre deben de estar entre comillas
+5- Se puede usar el abecedario ingles,numeros, _ y -
+6- la extension debe de ser .html, .htm
+7- todas las paginas web deben de tener un elemento title dentro de head, los autores deben de utilizar TITLE; para identificar los contenidos de un
+documento
+
+Tipos de Listas:
+1- Listas no ordenadas ( <ul> ) - elementos de las listas se definen con <li>
+2- Lista Ordenada ( <ol> ) - elementos de las listas se definen con <li>
+3-Lista de descripción ( <dl> ) - elementos de las listas se definen con <dt>(para cada termino), <dd>(para cada descripcion)
+Se pueden crear listas anidadas (listas dentro de otras) y se pueden combinar de cualquier forma
+
+ENLACES
+Dos tipos de enlaces:
+- enlaces intradocumental: enlace a un punto en el mismo documento en el que se define el enlace
+- enlace extradocumental: enlace a otro documento
+Etiqueta para definir un hiper enlace <a>enlace</a>
+
+Enlace intradocumental
+<a href="#nombre">enlace</a>
+Destino:
+<a name="nombre">...</a>
+<h1 id="nombre">...</h1>
+<p id="nombre">...</p>
+
+Enlace extradocumental
+enlace a un documento externo
+<a href="pagina.html">...</a>
+enlace a un punto en otro documento
+<a href="pagina.html #nombre">...</a>
+Destino:
+<a name="nombre">...</a>
+<h1 id="nombre">...</h1>
+<p id="nombre">...</p>
+
+Consejos para enlaces"
+- lleva cuidado con los nombres de los ficheros, con las minusculas y las mayusculas
+- carecteres extranhos, solo usar alfabeto en ingles, -, _, numeros
+- cuiado con las rutas fisicas, si pones una direccion que se encuentra en tu computadora (ruta fisica a tu ordenador), al publicar no va a funcionar
+
+Errores o confusiones tipicos al aprender HTML:
+1- Saltos de linea: no son obligatorios a la hora de escibir una pagina web, pero para introducir un salto de linea hay que usar los comandos <br></br>, que
+es una etiqueta vacia que no puede tener contenido dentro. PERO NUNCA LA VERAS ESCRITA ASI, usualmente se encuentra de la forma:
+<br> (se puede usar en HTML 5)
+<br /> se puede usar en HTML 5 y sugerido por el profe por la compabilidad con XML 1) 
+
+2- Espacios en blanco: 1,2,3,..,10 espacios en blanco se visualizan de la misma forma
+¿Como se introducen varios espacios en blanco?
+Forma especial de representar espacios en blanco &nbsp (no breake space,espacio en blanco que no se puede romper). Pero no se deben de utilizar para 
+introducir espacios en blanco por cuestion de presentacion visual, si se quiere agregar un espacio en blanco visual, se debe de emplear CSS
+
+3- Referencias de caracteres: son necesarias para representar caracteres especiales
+& -> &amp;
+" -> &quot;
+' -> &apos;
+< -> &lt;
+> -> &gt;
+Referencias de caracteres numericas decimales &#nnnn;
+Referencias de caracteres numericas hexadecimales &#xnnnn; &#XNNNN;
+
+* Las paginas web se publican en su servicio de alojamiento o hosting, existen servicios y de pago. 
+
+Formularios
+Etiquetas: form, input, select, textarea, label, fieldset
+<form> </form>
+Atributos del form
+1- action es el unico atributo requerido para la etiqueta form, espera una cadena de texto que especifique la URL o ruta destino que procese los datos
+de la peticion, se puede usar una ruta absoluta o relativa
+2- method, forma de envio, GET & Post, Get por defecto
+Metodos de envio: 
+- GET: Datos visibles (URL), Limitada, Favoritos - Ejemplo Formulario de Busqueda
+- Post: Datos no visibles, sin limite, Ficheros - Ejemplo Formulario de registro
+3- accept-charset: codificacion de caracteres
+4- enctype:  
+INPUT: no usa </input>, se usa asi <input ..../>
+- Texto, casilla de verificacion, casilla de opcion, archivos, texto enmascarado (password), ocultos, botones
+Atributos de Input
+1- name: texto, nombre del campo para el envio <input name= "email"/>
+2- type: no es obligatorio pero es recomendable "text" - texto, "checkbox" - casilla de verificacion, "radio"- casilla de opcion (radio)
+"file"- subir fichero, "password"-texto enmascarado, "hidden"-campo oculto, "button"-boton,"submit"-boton de enviar, "image"- imagen con boton de enviar
+"reset"- boton de limpiar
+3- disable: desabilita el campo para que no pueda ser utilizado, 
+campo habilitado <input type="text" value="Hello World"/>
+campo no habilitado <input type="text" value="Hello World" disable="disable	"/>
+4- readonly: parecido a disable
+5- value: algunos campos necesitan un atributo para completar su funcionalidad
+
+
+
+Atributos de <input type="text">
+- maxlength ="numero", maximo numero de caracteres
+- size="numero", tamaño en numero de caracteres, estilo.
+- value="texto", valor que tiene el campo por defecto <input type="text" value ="Buscar.."/>
+
+Casillas de verificacion: atributos de <input type="checkbox">
+- name: mismo name para todo el grupo
+- checked: checkea por defecto
+- value= es imprencidible, le indica que tipo de info tiene que enviar en caso de que este tildada
+<input type="checkbox" value="html/">HTML
+<input type="checkbox" value="css/">CSS
+
+Casillas del tipo radio (casillas de opcion o radio)
+- name= mismo name para todo el grupo
+<input type="radio" name="tema"/>HTML
+- checked: checkea por defecto
+<input type="radio" checked="checked"/>HTML
+- value= es imprencidible, le indica que tipo de info tiene que enviar en caso de que este tildada
+<input type="radio" value="html/">HTML
+<input type="radio" value="css/">CSS
+
+Input de tipo file - adjuntar archivos al momento de envio de formularios
+<input type="file" accept="image/gif"/>  con este atributo especificamos los tipos de archivos que se podran subir
+para el envio de archivos, <form> debe de tener como atributo enctype
+<form enctype="multipart/form-data">
+	<input type="file".../>
+	...
+</form>
+
+Campos enmascarado: mismas opciones que los campos de tipo texto
+
+campos ocultos: solo son validos los atributos name y value ya que esta oculto para el usuario
+
+botones: para cada boton se utiliza un input diferente
+<input type="submit or reset or button or image">
+button sin accion, para dotar de accion a estos botones es necesario trabajar con eventos de javascipt
+value= especifica el texto que aparece en el boton
+
+Lista desplegable:
+<select>
+	<option value="HTML">
+		HTML
+	</option>
+	<option value="CSS">
+		CSS
+	</option>	
+</select>
+Lista de opcion multiple
+<select multiple="multiple">
+	<option value="HTML">
+		HTML
+	</option>
+	<option value="CSS">
+		CSS
+	</option>	
+</select>
+
+
+Listas: <select>+<option>
+Texto multilinea: <textarea>
+Asociar texto a controles: <label>
+Agrupar controles: <fieldset>
+
+
+Fin de los comentarios -->
+<htlm>
+<head>  <!-- informacion, metadatos de como se va a procesar la pagina web, no se escribe nada que deba de aparecer en la pag web  -->
+<title>Erase una vez HTLM</title>
+</head>
+<body> <!-- Cuerpo de la pagina, todo lo que va aqui si se va a ver en la pagina web -->
+<h1>Erase una vez HTLM</h1>
+
+<h2>El Padre</h2>
+<p>El Padre de la web, <strong>Tim Berners-Lee, es tambien</strong>, el padre del lenguaje HTLM, <em>Hypertex Markup Language</em>.</p>
+
+<h2>La estandarizacion</h2>
+<p>El lenguaje HTLM esta estandarizado por el W3C, el <em>world wide web consortium</em>.</p>
+<p>La version actual de HTLM es la version 5, aunque no este completada.</p>
+<p>se espera que este terminada en el anho <strong>2014</strong>.</P>
+
+<h3>Lista no ordenada</h3>
+<ul>
+<li>Primer elemento</li>
+<li>Segundo elemento</li>
+<li>Tercer elemento</li>
+<li>Cuarto elemento</li>
+</ul>
+
+<h3>Lista ordenada</h3>
+<!-- <ol type="A"> -->
+<ol type='I' reversed='reversed'>
+<li>Primer elemento</li>
+<li>Segundo elemento</li>
+<li>Tercer elemento</li>
+<li>Cuarto elemento</li>
+</ol>
+
+<h3>Lista de Descripcion</h3>
+<dl>
+<dt>HTML</dt>
+<dd>Hypertex Markup Lenguage</dd>
+<dt>HTTP</dt>
+<dd>Hypertex Transfer Protocole</dd>
+<dt>URL</dt>
+<dd>Uniform Resource Locator</dd>
+</dl>
+
+<h3>Lista anidadas o sublistas</h3>
+<ul>
+<li>Lista de Primer nivel:
+	<ul>
+	<li>Lista de Segundo Nivel:
+		<ul>
+		<li>Lista de Tercer Nivel
+		</li>
+		</ul>
+	</li> 
+	</ul>
+</li>
+</ul>
+<!-- Ejemplo de Enlace -->
+
+<a href="#nombre">enlace</a>
+
+
+<!-- Ejemplo de salto de linea -->
+<p>Calle Rio Tebicuary casi Rio Apa,<br />Barrio Valle Apua,<br />Lambare,<br />Paraguay</p>
+<!-- Esto esta mal en un salto de linea -->
+<!-- <p>34 comentario<br />
+<a href="">Anhadir comentarios</a></p> -->
+
+<p id="nombre">El enlace te deberia de traer aqui</p>
+
+</body>
+</htlm>
