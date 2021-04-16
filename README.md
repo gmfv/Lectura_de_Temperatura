@@ -6,7 +6,7 @@ El proyecto consiste en la lectura y almacenamiento de la temperatura del person
 ## Materiales 📋
 
 Para el desarrollo del proyecto se ha utilizado:
-* Un raspberry Pi 3+
+* Un raspberry Pi 3 Model B+
 * Un sensor HW691
 
 ## Descripción del Proyecto
