@@ -17,7 +17,8 @@ def lectura_boton():
 while True:
     #Se establece la comunicacion con el sensor
     bus = SMBus(1)
-    sensor = MLX90614(bus, address=0x5A)
+    dir= #pin GPIO del sensor
+    sensor = MLX90614(bus, address=dir)
     #Se cargan los datos leidos por el sensor
     boton=lectura_boton()
     if boton is True:
