@@ -14,7 +14,7 @@
 
 ## Construido con 🛠️
  * Sistema de gestión de base de datos: MariaDB
- * Lenguaje de programacion del sensor: Python
+ * Lenguaje de programación para obtención de datos: Python
 
 
 ## Autores ✒️
