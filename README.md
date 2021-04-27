@@ -13,7 +13,8 @@
  Utilizamos la Raspberry Pi para hacer nuestro servidor, MySQL para nuestro motor de base de datos
 
 ## Construido con 🛠️
- 
+ * Sistema de gestión de base de datos: MariaDB
+ * Lenguaje de programacion del sensor: Python
 
 
 ## Autores ✒️
