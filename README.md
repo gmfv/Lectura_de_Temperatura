@@ -13,13 +13,14 @@
  Utilizamos la Raspberry Pi para hacer nuestro servidor, MySQL para nuestro motor de base de datos
 
 ## Construido con 🛠️
- 
+ * Sistema de gestión de base de datos: MariaDB
+ * Lenguaje de programación para obtención de datos: Python 
 
 
 ## Autores ✒️
 
-* **Giohanna Martínez Fernández** - [gmfv](https://github.com/gmfv)
-* **Matias Gagliardone**
-* **Diego Valenzuela Bernal**
-* **Julio Fabian Avalos Peralta** 
-* **Diego Garcia**
+* **Giohanna Martínez Fernández** - [GiohannaM](https://github.com/gmfv)
+* **Matias Gagliardone** - [MatiasGagliardone](https://github.com/matiGSX)
+* **Diego Valenzuela Bernal** - [ValenzuelaDiego](https://github.com/ValenzuelaDiego)
+* **Julio Fabian Avalos Peralta** - [FabianA](https://github.com/JAvalos1)
+* **Diego Garcia** - [DiegoGar](https://github.com/diegogar95)
