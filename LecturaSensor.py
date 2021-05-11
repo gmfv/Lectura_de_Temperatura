@@ -41,7 +41,7 @@ while True:
         idmedicion="1"
         miConexion=MySQLdb.connect(host="",user="root",passwd="",db="lecturatemperatura")
         cur=miConexion.cursor()
-        cur.execute("INSERT into medicion (id_medicion,temperatura,cedulafuncionario,fecha,hora,lugar_medicion) values + ("+idmedicion+","+temperatura+","+cedula+","+fecha+","+hora+","+lugar+")")
+        cur.execute("INSERT into medicion (id_medicion,temperatura,cedulafuncionario,fecha,hora,lugar_medicion) values + (",idmedicion,",",temperatura,",",cedula,",",fecha,",",hora,",",lugar,")")
         miConexion.close()
         boton=False
     sleep(0.3)
