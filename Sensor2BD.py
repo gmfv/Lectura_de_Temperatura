@@ -9,7 +9,7 @@ conn = mariadb.connect(
     user="root",
     password="",
     host="localhost",
-    database="AplicacionSensorTemperatura")
+    database="SensorTemperatura1")
 cur = conn.cursor() 
 
 GPIO.setmode(GPIO.BOARD)
@@ -37,13 +37,13 @@ while True:
     sleep(0.1)
     bus.close()
     today = date.today()
-    now= = datetime.now()
+    now= datetime.now()
     d1= today.strftime("%d/%m/%Y")
     d2=now.strftime("%H:%M:%S")
     id_medicion="1"
     lugar_marcacion="Ala norte"
     try:
-        cur.execute("INSERT INTO Medicion values((?), (?), (?), (?), (?), (?))", (id_medicion, tempe, cedulafuncionario, d1, hora, lugar_marcacion))
+        cur.execute("INSERT INTO Medicion values((?), (?), (?), (?), (?), (?))", (id_medicion, tempe, ced, d1, d2, lugar_marcacion))
     except mariadb.Error as e: 
         print(f"Error: {e}")
     conn.commit()     
