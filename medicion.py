@@ -4,7 +4,7 @@ class Medicion:
     def abrir(self):
         conexion=mysql.connector.connect(host="localhost", 
                                               user="root", 
-                                              passwd="marima63", 
+                                              passwd="", 
                                               database="sensortemperatura1")
         return conexion
 
