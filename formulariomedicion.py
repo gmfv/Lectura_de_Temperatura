@@ -9,7 +9,6 @@ import RPi.GPIO as GPIO
 
 import medicion
 
-
 class FormularioMedicion:
     def __init__(self):
         self.medicion1=medicion.Medicion()
@@ -47,9 +46,7 @@ class FormularioMedicion:
         bus = SMBus(1)
         dir= 0x5A #pin GPIO del sensor
         sensor = MLX90614(bus, address=dir)
-        #Se cargan los datos leidos por el sensor
-        tempe= round(sensor.get_object_1())+6
-        #sleep(0.1)
+        tempe= round(sensor.get_object_1(),2)+3
         bus.close()
         self.entrymedicion.configure(state='normal')
         self.medicioncarga.set("")
@@ -57,22 +54,21 @@ class FormularioMedicion:
         self.entrymedicion.configure(state='disabled')
 
     def agregar(self):
-        #datos=(self.medicioncarga.get(), self.cedulacarga.get())
         hora=datetime.now().strftime("%H:%M:%S")
-        datos = (self.medicioncarga.get(), self.cedulacarga.get(), date.today(), hora)
-        #print (datos)
+        datos = (self.medicioncarga.get(), self.cedulacarga.get(), date.today(), hora, "Ala Norte")
         self.medicion1.alta(datos)
         mb.showinfo("Informacion", "Los datos fueron cargados")
         self.medicioncarga.set("")
         self.cedulacarga.set("")
 
     def agregar_f(self):
-        datos=(self.cedulacargaf.get(), self.nombrecarga.get(), self.correocargaf.get())
+        datos=(self.cedulacargaf.get(), self.nombrecarga.get(), self.correocargaf.get(), self.telefonocarga.get())
         self.medicion1.alta_f(datos)
         mb.showinfo("Informacion", "Funcionario agregado")
         self.cedulacargaf.set("")
         self.nombrecarga.set("")
         self.correocargaf.set("")
+        self.telefonocarga.set("")
 
     def consulta_por_cedula(self):
         self.pagina2 = ttk.Frame(self.cuaderno1)
@@ -93,12 +89,10 @@ class FormularioMedicion:
     def consultar(self):
         datos=(self.cedula.get())
         respuesta=self.medicion1.consulta(datos)
-        #print(respuesta)
-        #print(len(respuesta))
         if len(respuesta)>0:
             self.scrolledtext2.delete("1.0", tk.END)        
             for row in respuesta:
-                self.scrolledtext2.insert(tk.END, "Temperatura: "+str(row[0])+"\nFecha: "+str(row[1])+"\nHora: "+str(row[2])+"\n\n")
+                self.scrolledtext2.insert(tk.END, "Temperatura: "+str(row[0])+"\nFecha: "+str(row[1])+"\nHora: "+str(row[2])+"\nLugar de Marcación: "+str(row[3])+"\n\n")
         else:
             self.cedula.set('')
             mb.showinfo("Informacion", "No existe registro del funcionario")
@@ -117,7 +111,7 @@ class FormularioMedicion:
         respuesta=self.medicion1.recuperar_todos()
         self.scrolledtext1.delete("1.0", tk.END)        
         for row in respuesta:
-            self.scrolledtext1.insert(tk.END, "Cedula:"+str(row[0])+"\n Nombre:"+row[1]+"\n Correo:"+row[2]+"\n\n")
+            self.scrolledtext1.insert(tk.END, "Cedula:"+str(row[0])+"\n Nombre:"+row[1]+"\n Correo:"+row[2]+"\n Telefono:"+row[3]+"\n\n")
 
     def carga_funcionario(self):
         self.pagina4 = ttk.Frame(self.cuaderno1)
@@ -139,7 +133,12 @@ class FormularioMedicion:
         self.correocargaf=tk.StringVar()
         self.entrycorreo=ttk.Entry(self.labelframe3, textvariable=self.correocargaf)
         self.entrycorreo.grid(column=1, row=3, padx=4, pady=4)
+        self.telefonocarga=tk.StringVar()
+        self.entrytelefono=ttk.Entry(self.labelframe3, textvariable=self.telefonocarga)
+        self.entrytelefono.grid(column=1, row=4, padx=4, pady=4)
+        self.label4=ttk.Label(self.labelframe3, text="Telefono:")
+        self.label4.grid(column=0, row=4, padx=4, pady=4)
         self.boton1=ttk.Button(self.labelframe3, text="Agregar", command=self.agregar_f)
-        self.boton1.grid(column=1, row=4, padx=4, pady=4)
+        self.boton1.grid(column=1, row=5, padx=4, pady=4)
 
 aplicacion1=FormularioMedicion()
