@@ -123,7 +123,7 @@ class FormularioMedicion:
 
     def carga_funcionario(self):
         self.pagina4 = ttk.Frame(self.cuaderno1)
-        self.cuaderno1.add(self.pagina4, text="Cargar funcionario")
+        self.cuaderno1.add(self.pagina4, text="Carga de funcionario")
         self.labelframe3=ttk.LabelFrame(self.pagina4, text="Agregar datos del funcionario nuevo")
         self.labelframe3.grid(column=0, row=0, padx=5, pady=10)
         self.label1=ttk.Label(self.labelframe3, text="Cedula:")
