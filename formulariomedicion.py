@@ -56,15 +56,23 @@ class FormularioMedicion:
     def agregar(self):
         hora=datetime.now().strftime("%H:%M:%S")
         datos = (self.medicioncarga.get(), self.cedulacarga.get(), date.today(), hora, "Ala Norte")
-        self.medicion1.alta(datos)
-        mb.showinfo("Informacion", "Los datos fueron cargados")
+        respuesta = self.medicion1.consultaexistencia(self.cedulacarga.get())
+        if len(respuesta)>0:
+            self.medicion1.alta(datos)
+            mb.showinfo("Informacion", "Los datos fueron cargados")
+        else:
+            mb.showinfo("Informacion", "No existe registro del funcionario")
         self.medicioncarga.set("")
         self.cedulacarga.set("")
 
     def agregar_f(self):
         datos=(self.cedulacargaf.get(), self.nombrecarga.get(), self.correocargaf.get(), self.telefonocarga.get())
-        self.medicion1.alta_f(datos)
-        mb.showinfo("Informacion", "Funcionario agregado")
+        respuesta = self.medicion1.consultaexistencia(self.cedulacargaf.get())
+        if len(respuesta)>0:
+            mb.showinfo("Informacion", "Ya existe registro del funcionario")
+        else:
+            self.medicion1.alta_f(datos)
+            mb.showinfo("Informacion", "Funcionario agregado")    
         self.cedulacargaf.set("")
         self.nombrecarga.set("")
         self.correocargaf.set("")

@@ -37,7 +37,17 @@ class Medicion:
         cone.close()
         #print(cursor.fetchall())
         return registro
-
+    def consultaexistencia(self, datos):
+        cone=self.abrir()
+        cursor=cone.cursor()
+        sql="select cedula, nombre from funcionario where cedula = %s" % datos
+        #print (sql)
+        cursor.execute(sql)
+        registro=cursor.fetchall()
+        cone.close()
+        #print(cursor.fetchall())
+        return registro
+    
     def recuperar_todos(self):
         cone=self.abrir()
         cursor=cone.cursor()
