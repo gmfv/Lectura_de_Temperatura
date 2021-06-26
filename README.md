@@ -10,10 +10,10 @@
 * Un sensor HW691
 
 ## Descripción del Proyecto
- Utilizamos la Raspberry Pi para hacer nuestro servidor, HeidiSQL para nuestro administrador de base de datos
+ Utilizamos la Raspberry Pi para hacer nuestro servidor, phpMyAdmin para nuestro administrador de base de datos.
 
 ## Construido con 🛠️
- * Sistema de gestión de base de datos: MySQL
+ * Sistema de gestión de base de datos: MariaDB
  * Lenguaje de programación para obtención de datos: Python
  * Librería utilizada para desarrollo de interfaz: Tkinter
 
