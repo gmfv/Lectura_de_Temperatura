@@ -16,7 +16,7 @@
  * Sistema de gestión de base de datos: MariaDB
  * Lenguaje de programación para obtención de datos: Python
  * Librería utilizada para desarrollo de interfaz: Tkinter
-
+ * Librería para conexión con la BD: mysql-connector 
 
 ## Autores ✒️
 
