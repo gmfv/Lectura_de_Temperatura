@@ -2,13 +2,6 @@
 
  El proyecto consiste en la lectura y almacenamiento de la temperatura del personal de una empresa, a fin de llevar un control y cumplir con los protocolos de sanidad vigentes.
 
-
-## Materiales 📋
-
- Para el desarrollo del proyecto se ha utilizado:
-* Un Raspberry Pi 3 Model B+
-* Un sensor HW691
-
 ## Descripción del Proyecto
  Utilizamos la Raspberry Pi para hacer nuestro servidor, phpMyAdmin para nuestro administrador de base de datos.
 
@@ -17,7 +10,16 @@
  * Lenguaje de programación para obtención de datos: Python
  * Librería utilizada para desarrollo de interfaz: Tkinter
  * Librería para conexión con la BD: mysql-connector
-  
+ 
+## Materiales 📋
+
+ Para el desarrollo del proyecto se ha utilizado:
+* Un Raspberry Pi 3 Model B+
+* Un sensor HW691
+
+## Conexiones
+ ![texto cualquiera por si no carga la imagen](https://github.com/gmfv/Lectura_de_Temperatura/blob/main/ConexionesFritz.png?raw=true)
+
 ## Manual del Usuario
  *Ver ManualUsuario.pdf*
  
