@@ -16,12 +16,14 @@
  * Sistema de gestión de base de datos: MariaDB
  * Lenguaje de programación para obtención de datos: Python
  * Librería utilizada para desarrollo de interfaz: Tkinter
- * Librería para conexión con la BD: mysql-connector 
-
+ * Librería para conexión con la BD: mysql-connector
+  
+## Manual del Usuario
+ *Ver ManualUsuario.pdf*
+ 
 ## Autores ✒️
 
 * **Giohanna Martínez Fernández** - [GiohannaM](https://github.com/gmfv)
 * **Matias Gagliardone** - [MatiasGagliardone](https://github.com/matiGSX)
 * **Diego Valenzuela Bernal** - [ValenzuelaDiego](https://github.com/ValenzuelaDiego)
 * **Julio Fabian Avalos Peralta** - [FabianA](https://github.com/JAvalos1)
-* **Diego Garcia** - [DiegoGar](https://github.com/diegogar95)
