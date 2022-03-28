@@ -18,7 +18,7 @@
 * Un sensor HW691
 
 ## Conexiones
- ![texto cualquiera por si no carga la imagen](https://github.com/gmfv/Lectura_de_Temperatura/blob/main/ConexionesFritz.png?raw=true)
+ ![Imagen_conexion](https://github.com/gmfv/Lectura_de_Temperatura/blob/main/ConexionesFritz.png?raw=true)
 
 ## Manual del Usuario
  *Ver ManualUsuario.pdf*
