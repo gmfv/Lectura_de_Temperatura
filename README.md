@@ -1,6 +1,7 @@
 # Lectura de Sensor de Temperatura - Entrada
 
  El proyecto consiste en la lectura y almacenamiento de la temperatura del personal de una empresa, a fin de llevar un control y cumplir con los protocolos de sanidad vigentes.
+ 
 ![Image text](https://github.com/gmfv/Lectura_de_Temperatura/blob/main/Interfaz_BD%20(1).jpg)
 
 ## Descripción del Proyecto
